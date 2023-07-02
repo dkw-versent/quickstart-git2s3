@@ -26,7 +26,7 @@ def lambda_handler(event,context):
             # Generate keys
             new_key = rsa.generate_private_key(
                 backend=crypto_default_backend(), public_exponent=65537,
-                key_size=2048)
+                key_size=4096)
             priv_key = str(new_key.private_bytes(
                 crypto_serialization.Encoding.PEM,
                 crypto_serialization.PrivateFormat.PKCS8,
