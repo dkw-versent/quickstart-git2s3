@@ -59,7 +59,7 @@ Parameters:
   AllowedIps:
     Description: Comma-separated list of allowed IP CIDR blocks. (NOTE: you want to use an API key instead)
     Type: String
-    Default: 127.0.0.1/32
+    Default: ''
   ApiSecret:
     Description: API secret used to authenticate access to webhooks in GitHub Enterprise, GitLab, and other Git services. If a webhook payload header contains a matching secret, IP address authentication is bypassed. API secrets cannot contain commas (,), backward slashes (\), or quotes (").
     Type: String
@@ -77,13 +77,12 @@ Parameters:
     AllowedPattern: ^[0-9a-zA-Z]+([0-9a-zA-Z-]*[0-9a-zA-Z])*$
     ConstraintDescription: Quick Start S3 bucket name can include numbers, lowercase letters, uppercase letters, and hyphens (-). It cannot start or end with a hyphen
       (-).
-    Default: aws-quickstart
     Description: S3 bucket name for Quick Start assets. It can include numbers, lowercase letters, uppercase letters, and hyphens (-). It cannot start or end with a hyphen (-).
     Type: String
   QSS3BucketRegion:
-    Default: 'us-east-1'
     Description: AWS Region where the Quick Start assets S3 bucket (QSS3BucketName) is hosted. Required when using your own S3 bucket.
     Type: String
+    Default: ap-southeast-2
   QSS3KeyPrefix:
     AllowedPattern: ^[0-9a-zA-Z-/]*$
     ConstraintDescription: Quick Start key prefix can include numbers, lowercase letters, uppercase letters, hyphens (-), and forward slashes (/).
