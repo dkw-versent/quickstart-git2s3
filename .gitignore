@@ -3,3 +3,4 @@ functions/packages
 .DS_Store
 taskcat_outputs
 *.zip
+*.swp
